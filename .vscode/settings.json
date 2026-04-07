@@ -63,6 +63,6 @@
 	"terminal.integrated.defaultProfile.osx": "bash",
 
 	"liveServer.settings.host": "127.0.0.1",
-	"liveServer.settings.port": 5501,
+	"liveServer.settings.port": 5503,
 	"liveServer.settings.NoBrowser": false
 }

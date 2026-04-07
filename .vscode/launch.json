@@ -1,34 +1,13 @@
 {
 	"version": "0.2.0",
 	"configurations": [
-
-		// 라이브 서버 확장을 통한 서버베이스의 실행. (라이브 서버 수동 실행 필요)
-		{
-			"name": "Launch: Game on Live Server",
-			"type": "chrome",
-			"request": "launch",
-			"url": "http://127.0.0.1:5501/main.html",
-			"webRoot": "${workspaceFolder}",
-			// "preLaunchTask": "BUILD_DEBUG"
-		},
-
 		// 라이브 서버 확장을 통한 서버베이스의 실행. (라이브 서버 수동 실행 필요)
 		{
 			"name": "Launch: Visual Editor on Live Server",
 			"type": "chrome",
 			"request": "launch",
-			"url": "http://127.0.0.1:5501/visualeditor.html",
+			"url": "http://127.0.0.1:5503/index.html",
 			"webRoot": "${workspaceFolder}",
-			// "preLaunchTask": "BUILD_DEBUG"
-		},
-
-		// 크롬으로 파일 실행.
-		{
-			"name": "Launch: Game on Chrome",
-			"type": "chrome",
-			"request": "launch",
-			"file": "${workspaceFolder}/main.html",
-			"webRoot": "${workspaceFolder}"
 		}
 	]
 }
