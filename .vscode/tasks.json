@@ -1,0 +1,69 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "Update: JSDoc",
+			"type": "shell",
+			"command": "jsdoc -c jsdoc.conf.json",
+			"group": "build",
+			"problemMatcher": []
+		},
+		{
+			"label": "Bundle (Font)",
+			"type": "shell",
+			"command": "ttf2woff2 < assets/fonts/BMJUA_ttf.ttf > assets/fonts/BMJUA.woff2",
+			"group": "build",
+			"problemMatcher": []
+		},
+		{
+			"label": "Game: Bundle (Debug)",
+			"type": "shell",
+			"command": "esbuild main.js --bundle --outfile=build/game/bundle.js --format=iife --keep-names --sourcemap",
+			"group": {
+				"kind": "build",
+				"isDefault": true
+			},
+			"problemMatcher": []
+		},
+		{
+			"label": "Game: Bundle (Release)",
+			"type": "shell",
+			"command": "esbuild main.js --bundle --outfile=build/game/bundle.min.js --format=iife --minify --define:ESBUILD_DEBUG=false",
+			"group": {
+				"kind": "build",
+				"isDefault": true
+			},
+			"problemMatcher": []
+		},
+		{
+			"label": "Game: Build (Release)",
+			"type": "shell",
+			"command": "node tools/build.js dessertcafe",
+			"group": {
+				"kind": "build",
+				"isDefault": true
+			},
+			"problemMatcher": []
+		},
+		{
+			"label": "VisualEditor: Bundle (Release)",
+			"type": "shell",
+			"command": "esbuild src/visualeditor.js --bundle --outfile=build/visualeditor/bundle.min.js --format=iife --minify --define:ESBUILD_DEBUG=false",
+			"group": {
+				"kind": "build",
+				"isDefault": true
+			},
+			"problemMatcher": []
+		},
+		{
+			"label": "RPGGame: Bundle (Release)",
+			"type": "shell",
+			"command": "esbuild src/rpggame.js --bundle --outfile=build/rpggame/bundle.min.js --format=iife --minify --define:ESBUILD_DEBUG=false",
+			"group": {
+				"kind": "build",
+				"isDefault": true
+			},
+			"problemMatcher": []
+		}
+	]
+}
