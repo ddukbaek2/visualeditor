@@ -4,7 +4,7 @@
 		{
 			"label": "VisualEditor: Bundle (Debug)",
 			"type": "shell",
-			"command": "esbuild src/main.js --bundle --outfile=build/bundle.js --format=iife --keep-names --sourcemap",
+			"command": "esbuild src/main.js --bundle --outfile=build/js/bundle.js --format=iife --keep-names --sourcemap",
 			"group": {
 				"kind": "build",
 				"isDefault": true
@@ -14,7 +14,7 @@
 		{
 			"label": "VisualEditor: Bundle (Release)",
 			"type": "shell",
-			"command": "esbuild src/main.js --bundle --outfile=build/bundle.min.js --format=iife --minify",
+			"command": "esbuild src/main.js --bundle --outfile=build/js/bundle.min.js --format=iife --minify",
 			"group": {
 				"kind": "build",
 				"isDefault": true
